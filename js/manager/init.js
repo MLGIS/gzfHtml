@@ -1,17 +1,17 @@
 function initLayout(){
 	/*$("#umleft").load("left.html");*/
 	$("#umheader").load("header.html");
-	/*$("#umcenter").load("userapply.html",function(){
+	$("#umcenter").load("userapply.html",function(){
 		initWizard();
 		initTable();
-	}*/
-	$("#umcenter").load("container.html",function(){
+	});
+	/*$("#umcenter").load("container.html",function(){
 		$('.card.hover').hover(function(){
 	        $(this).addClass('flip');
 	      },function(){
 	        $(this).removeClass('flip');
 	      });
-    });
+    });*/
 }
 
 function initWizard(){
