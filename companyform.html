@@ -1,0 +1,137 @@
+<form id="defaultForm" method="post" class="form-horizontal" action="target.php">
+	<div class="form-group">
+		<label class="col-lg-3 control-label">姓名</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="firstName" required data-bv-trigger="keyup" data-bv-notempty-message="姓名不能为空" placeholder="姓名" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-lg-3 control-label">用户名</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="username" placeholder="用户名" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-lg-3 control-label">邮箱</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="email" placeholder="邮箱" />
+		</div>
+	</div>
+	<div class="form-group">
+            
+        <label class="col-lg-3 control-label">法人类型</label>
+        <div class="col-lg-5">
+            <select class="form-control" name="genre">
+                <option value="">企业法人</option>
+                <option value="">事业单位</option>
+                <option value="">行政单位</option>
+                <option value="">其他非企业法人</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+		<label class="col-lg-3 control-label">企业名称</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="email" placeholder="企业名称" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-lg-3 control-label">组织结构代码</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="email" placeholder="组织机构代码" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-lg-3 control-label">密码</label>
+		<div class="col-lg-5">
+			<input type="password" class="form-control" name="password" placeholder="密码" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-lg-3 control-label">确认密码</label>
+		<div class="col-lg-5">
+			<input type="password" class="form-control" name="confirmPassword" placeholder="密码" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-lg-3 control-label">性别</label>
+		<div class="col-lg-5">
+			<div class="radio-inline">
+				<label>
+                    <input type="radio" name="gender" value="0" /> 男
+                </label>
+			</div>
+			<div class="radio-inline">
+				<label>
+                    <input type="radio" name="gender" value="1" /> 女
+                </label>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-lg-3 control-label">生日</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="birthday" placeholder="生日（YYYY/MM/DD）" /> (YYYY/MM/DD)
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-lg-3 control-label">选择语言</label>
+		<div class="col-lg-5">
+			<div class="checkbox-inline">
+				<label>
+                    <input type="checkbox" name="languages[]" value="english" /> English
+                </label>
+			</div>
+			<div class="checkbox-inline">
+				<label>
+					<input type="checkbox" name="languages[]" value="french" /> French
+				</label>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-lg-3 control-label">选择程序设计语言</label>
+		<div class="col-lg-5">
+			<div class="checkbox-inline">
+				<label>
+                    <input type="checkbox" name="programs[]" value="net" /> .Net
+				</label>
+			</div>
+			<div class="checkbox-inline">
+				<label>
+                   <input type="checkbox" name="programs[]" value="java" /> Java
+                </label>
+			</div>
+			<div class="checkbox-inline">
+				<label>
+                    <input type="checkbox" name="programs[]" value="c" /> C/C++
+                </label>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-lg-3 control-label" id="captchaOperation"></label>
+		<div class="col-lg-2">
+			<input type="text" class="form-control" name="captcha" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-lg-9 col-lg-offset-3">
+			<button type="submit" class="btn btn-primary" name="signup" value="Sign up">Sign up</button>
+			<button type="submit" class="btn btn-primary" name="signup2" value="Sign up 2">Sign up 2</button>
+			<button type="button" class="btn btn-info" id="validateBtn">Manual validate</button>
+			<button type="button" class="btn btn-info" id="resetBtn">Reset form</button>
+		</div>
+	</div>
+</form>

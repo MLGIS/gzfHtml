@@ -1,0 +1,72 @@
+ul {
+	list-style: none;        
+}
+a img {
+	border: none;        
+}
+a {
+	color: #333;
+	text-decoration: none;    
+}
+a:hover {
+	color: #ff0000;
+}
+#mooc {
+
+
+	border-radius: 15px;
+	box-shadow: 2px 2px 10px #ababab;
+	text-align: left;          
+}
+
+#moocTitle {
+	height: 62px;
+	overflow: hidden;
+	font-size: 26px;
+	line-height: 62px;
+	padding-left: 30px;
+	background-image: -moz-linear-gradient(top, #f05e6f, #c9394a); /* Firefox */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f05e6f), color-stop(1, #c9394a)); /* Saf4+, Chrome */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8fa1ff', endColorstr='#f05e6f', GradientType='0'); /* IE*/
+	border: 1px solid ##f05e6f;
+	-moz-border-radius: 8px 8px 0 0;      /* Gecko browsers */
+	-webkit-border-radius: 8px 8px 0 0;   /* Webkit browsers */
+	border-radius: 8px 8px 0 0;
+	color: #fff;
+	position: relative;
+}
+#moocTitle a {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	display: inline;
+	color: #fff;
+	font-size: 12px;
+	line-height: 24px;
+}
+
+#moocBot {
+	width: 399px;
+	height: 10px;
+	overflow: hidden;    
+}
+
+#moocBox {
+	height: 258px;
+	overflow: hidden;   
+}
+#mooc ul li {
+	height: 24px;
+}
+#mooc ul li a {
+	width: 180px;
+	float: left;
+	display: block;
+	overflow: hidden;
+	text-indent: 15px;
+	height: 24px;
+}
+#mooc ul li span {
+	float: right;
+	color: #999;
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Stunning Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+			function hideURLbar() { window.scrollTo(0, 1); }
+		</script>
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/cnstyle.css" rel="stylesheet" type="text/css" />
+		<link href="css/jinduPanel.css" rel="stylesheet" type="text/css" />
+		
+
+		<!--script-->
+		<script src="js/jquery.min.js">
+		</script>
+		<script src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+		<script type="text/javascript" src="js/jiduPanel.js"></script>
+		<!--<script type="text/javascript" src="js/easing.js"></script>-->
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event) {
+					event.preventDefault();
+					$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
+				});
+				$(window).load(function() {
+					$("#flexiselDemo3").flexisel({
+						visibleItems: 6,
+						animationSpeed: 1000,
+						autoPlay: true,
+						autoPlaySpeed: 3000,
+						pauseOnHover: true,
+						enableResponsiveBreakpoints: true,
+						responsiveBreakpoints: {
+							portrait: {
+								changePoint: 480,
+								visibleItems: 3
+							},
+							landscape: {
+								changePoint: 640,
+								visibleItems: 3
+							},
+							tablet: {
+								changePoint: 768,
+								visibleItems: 4
+							}
+						}
+					});
+
+				});
+				startscroll();
+				
+			});
+			function logincheck(){
+				window.location.href="manager/main.html";
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="" id="clcontainer">
+			<nav class="navbar navbar-default" id="clheader">
+				<div class="container" id="clnavbar">
+					<div class="navbar-header" id="clnavtitle">
+						<button class=" navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#clnavmenu" aria-expanded="false">
+							<span class="sr-only"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="#" class="navbar-brand">
+							<h1>宝山公租房网上平台</h1><br />
+							<span>公租房</span>
+						</a>
+					</div>
+					<div class="collapse navbar-collapse " id="clnavmenu">
+						<ul class="nav navbar-nav navbar-right margin-top cl-effect-2">
+							<li>
+								<!--<a href="#"><span data-hover="首页">首页</span></a>-->
+								<a>
+								    <div style="margin-left: auto;margin-right: auto;" class="input-group">
+								      <input type="text" class="form-inline" placeholder="受理编号">
+								      <!--<span class="input-group-btn">-->
+								        <button class=" btn-default" type="button">Go!</button>
+								      
+								    </div>
+								</a>
+							</li>
+							<li>
+								<a href="#"><span data-hover="首页">首页</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="header-banner" id="clmain">
+				<section class="color bgi">
+					<div class="container">
+						<div class="banneer-text" id="cljindu">
+							<div class="processtable">
+								<table border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<th style="width:85px;">姓名</th>
+										<th style="width:248px;">身份证号码</th>
+										<th>业务进度</th>
+									</tr>
+								</table>
+
+								<div id="moocBox">
+									<ul id="con1">
+										<table border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td>何婷</td>
+												<td>510**********0025</td>
+												<td><span class="green">签约入住</span></td>
+											</tr>
+											<tr>
+												<td>张茹</td>
+												<td>610**********0427</td>
+												<td><span class="green">签约入驻</span></td>
+											</tr>
+											<tr>
+												<td>王子磊</td>
+												<td>371**********6473</td>
+												<td><span class="green">签约入驻</span></td>
+											</tr>
+											<tr>
+												<td>席石磊</td>
+												<td>321**********4512</td>
+												<td><span class="green">签约入驻</span></td>
+											</tr>
+											<tr>												<td>王晔</td>
+												<td>140**********0030</td>
+												<td><span class="green">签约入驻</span></td>
+											</tr>
+											<tr>
+												<td>周森林</td>
+												<td>310**********5094</td>
+												<td><span class="green">轮候选房</span></td>
+											</tr>
+
+											<tr>
+												<td>冀云肖</td>
+												<td>411**********3374</td>
+												<td><span class="green">审核未通过</span></td>
+											</tr>
+											<tr>
+												<td>张建华</td>
+												<td>320**********1519</td>
+												<td><span class="green">资质审核</span></td>
+											</tr>
+
+											<tr>
+												<td>吴爽</td>
+												<td>420**********1664</td>
+												<td><span class="green">轮候选房</span></td>
+											</tr>																						
+										</table>
+									</ul>
+									<ul id="con2">
+   								 </ul>
+								</div>
+							</div>
+						</div>
+							<div class="banner-forms" id="clloginform">
+								<form>
+									<!--
+                                    	作者：only_one1021@163.com
+                                    	时间：2017-03-10
+                                    	描述：登录出错提示框
+                                    -->
+									<div class="alert alert-danger alert-dismissable">
+										<button class="close" data-dismiss="alert" aria-hidden="true">X</button>
+										tips
+									</div>
+									<div class="form-group">
+										<label class="sr-only">登录名</label>
+										<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										<input type="text" class="form-control" name="name" placeholder="用户名/手机号/身份证">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="sr-only">密码</label>
+										<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+										
+										<input type="password" class="form-control" name="pwd" placeholder="密码">
+										</div>
+									</div>
+									<!--<input type="text" class="form-control" name="cfcode" placeholder="验证码" onfocus="this.value='';" onblur="if(this.value==''{this.value='';})">-->
+									<div class="form-group">
+										<label class="sr-only">验证码</label>
+										<div class="input-group">
+
+											<input type="text" class="form-control" name="cfcode" placeholder="验证码">
+											<div class="input-group-addon">验证码</div>
+										</div>
+									</div>
+									<!--<div class="input-group">
+									<label class="radio-inline">
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+									</label>
+									<label class="radio-inline">
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+									</label>
+									<label class="radio-inline">
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+									</label>
+								</div>-->
+
+									<div class="form-group">
+										<select name="type" class="form-control" placeholder="用户类型">
+											<option value="1">个人用户</option>
+											<option value="2">企业用户</option>
+											<option value="3">企业个人用户</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label class="checkbox-inline">
+										  	<input type="checkbox" id="inlineCheckbox1" value="true"> 记住我？</input>
+										</label>
+										<a href="resetpwd.html" class="btn-link">忘记密码</a>
+									</div>
+									<div class="form-group">							
+									<!--<a class='form-control btn-success' href="manager/main.html">登录</a>-->
+									<button type="button" id="loginBtn" onclick="logincheck()" class="form-control btn-success">登录</button>
+									</div>
+									<div class="form-group">
+									<a href="register.html" style="float:right" class="btn">注册</a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="container" id="clgongshi" style="background-color:#AC2925;height:10px;position:relative;">
+
+						</div>
+				</section>
+
+				</div>
+				<div class="container" id="clfooter">
+					<div class="footer">
+						<ul id="flexiselDemo3">
+							<li>
+								<div class="biseller-column">
+									<a class="lightbox" href="#one">
+										<img src="images/a1.jpg" alt="" />
+									</a>
+									<div class="lightbox-target" id="one">
+										<img src="images/a1.jpg" alt="" />
+										<a class="lightbox-close" href="#"> </a>
+
+										<div class="clear"> </div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="biseller-column">
+									<a class="lightbox" href="#two">
+										<img src="images/a3.jpg" alt="" />
+									</a>
+									<div class="lightbox-target" id="two">
+										<img src="images/a3.jpg" alt="" />
+										<a class="lightbox-close" href="#"> </a>
+
+										<div class="clear"> </div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="biseller-column">
+									<a class="lightbox" href="#four">
+										<img src="images/a2.jpg" alt="" />
+									</a>
+									<div class="lightbox-target" id="four">
+										<img src="images/a2.jpg" alt="" />
+										<a class="lightbox-close" href="#"> </a>
+
+										<div class="clear"> </div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="biseller-column">
+									<a class="lightbox" href="#four">
+										<img src="images/a4.jpg" alt="" />
+									</a>
+									<div class="lightbox-target" id="four">
+										<img src="images/a4.jpg" alt="" />
+										<a class="lightbox-close" href="#"> </a>
+
+										<div class="clear"> </div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	</body>
+
+</html>

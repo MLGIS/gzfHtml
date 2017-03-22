@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Stunning Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<!--style-->
+		<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css" />
+		<link rel="stylesheet" href="../js/jquery/datatables/css/dataTables.bootstrap.css">
+		<link rel="stylesheet" href="../css/manager/css.css" />
+
+		<!--script-->
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<script type="text/javascript" src="../js/jquery/jquery.bootstrap.wizard.min.js" ></script>
+		<script type="text/javascript" src="../js/angular/angular1.6.2.js"></script>
+		
+		<script src="../js/jquery/datatables/jquery.dataTables.min.js"></script>
+    <script src="../js/jquery/datatables/ColReorderWithResize.js"></script>
+    <script src="../js/jquery/datatables/colvis/dataTables.colVis.min.js"></script>
+    <script src="../js/jquery/datatables/tabletools/ZeroClipboard.js"></script>
+    <script src="../js/jquery/datatables/tabletools/dataTables.tableTools.min.js"></script>
+    
+		<script type="text/javascript" src="../js/angular/app.js"></script>
+		<script type="text/javascript" src="../js/manager/init.js" ></script>
+		<title></title>
+	</head>
+
+	<body ng-app="gzf">
+		<div id="ummain" class="">
+			<div id="umheader" class="headernav navbar navbar-default navbar-fixed-top ">
+
+			</div>
+			<div id="umleft" class="leftnav" ng-controller="menu" ng-include="'left.html'">
+				
+				<li class="navigation" id="navigation" ng-repeat="item in menu.items">
+						<a href="#" class="sidebar-toggle" ng-bind="item.tile"></a>
+				</li>
+				<li class="navigation" id="navigation">
+						<a href="#" class="sidebar-toggle">{{'test'}}</a>
+				</li>
+			</div>
+			<div id="umright" class="">
+
+			</div>
+			<div id="umcenter" class="" ><!--ng-include="'container.html'"-->
+
+			</div>
+			<div id="umfooter" class="">
+
+			</div>
+
+		</div>
+		<div id="umloader" class="">
+
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				initLayout();
+			})
+		</script>
+	</body>
+
+</html>
