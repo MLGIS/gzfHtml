@@ -178,7 +178,7 @@
 -->
 	
 <li class="navigation" ng-repeat="item in items">
-		<a href="#" class="sidebar-toggle" ng-bind="item.tile"></a>
+		<a href="#{{item.url}}" class="sidebar-toggle" ng-bind="item.tile"></a>
 </li>
 <li class="summary" id="order-summary">
 		<a href="#" class="sidebar-toggle underline" data-toggle="#order-summary">Orders Summary <i class="fa fa-angle-up"></i></a>
