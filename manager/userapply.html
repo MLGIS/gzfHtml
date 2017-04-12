@@ -32,16 +32,16 @@
 					<div class="tab-tiles nopadding color transparent-black rounded-top-corners">
 						<ul>
 							<li>
-								<a href="#tab1" data-toggle="tab">个人信息</a>
+								<a href="#tab1" target="_self" data-toggle="tab">个人信息</a>
+							</li>
+							<li class="hidden">
+								<a href="#tab2" target="_self" data-toggle="tab">共同申请人</a>
 							</li>
 							<li>
-								<a href="#tab2" data-toggle="tab">合租人</a>
+								<a href="#tab3" target="_self" data-toggle="tab">材料附件</a>
 							</li>
 							<li>
-								<a href="#tab3" data-toggle="tab">材料附件</a>
-							</li>
-							<li>
-								<a href="#tab2" data-toggle="tab">审核状态</a>
+								<a href="#tab2" target="_self" data-toggle="tab">审核状态</a>
 							</li>
 						</ul>
 					</div>
@@ -69,7 +69,12 @@
 									<div class="form-group col-md-6">
 										<label for="password" class="col-sm-3 control-label">性别 *</label>
 										<div class="col-sm-8">
-											<input type="password" class="form-control" id="grender" parsley-trigger="change" parsley-required="true" parsley-minlength="6" parsley-type="alphanum" parsley-validation-minlength="1">
+											<select class="form-control" id="gender" parsley-required="true"> 
+												<option value=""></option>
+												<option value="男">男</option>
+												<option value="女">女</option>
+											</select> 
+											<!--<input type="password" class="form-control" id="grender" parsley-trigger="change" parsley-required="true" parsley-minlength="6" parsley-type="alphanum" parsley-validation-minlength="1">-->
 										</div>
 									</div>
 
@@ -100,19 +105,58 @@
 									<div class="form-group col-md-6">
 										<label for="passwordconfirm" class="col-sm-3 control-label">婚姻状况*</label>
 										<div class="col-sm-8">
-											<input type="text" class="form-control" id="merried" parsley-trigger="change" parsley-required="true" parsley-minlength="6" parsley-type="alphanum" parsley-validation-minlength="1" parsley-equalto="#password">
+											<select class="form-control">
+												<option value=""></option>
+												<option value="0">未婚</option>
+												<option value="1">已婚</option>
+												<option value="2">离婚</option>
+												<option value="3">丧偶</option>
+											</select>
+											<!--<input type="text" class="form-control" id="merried" parsley-trigger="change" parsley-required="true" parsley-minlength="6" parsley-type="alphanum" parsley-validation-minlength="1" parsley-equalto="#password">-->
 										</div>
 									</div>
 									<div class="form-group col-md-6">
 										<label for="passwordconfirm" class="col-sm-3 control-label">文化程度*</label>
 										<div class="col-sm-8">
-											<input type="text" class="form-control" id="wenhuachengdu" parsley-trigger="change" parsley-required="true" parsley-minlength="6" parsley-type="alphanum" parsley-validation-minlength="1" parsley-equalto="#password">
+											<select class="form-control">
+												<option value=""></option>
+												<option value="">小学</option>
+												<option value="">初中</option>
+												<option value="">中专、职校</option>
+												<option value="">高中</option>
+												<option value="">大专、高职</option>
+												<option value="">本科</option>
+												<option value="">硕士</option>
+												<option value="">博士</option>
+												<option value="">其他</option>
+											</select>
+											<!--<input type="text" class="form-control" id="wenhuachengdu" parsley-trigger="change" parsley-required="true" parsley-minlength="6" parsley-type="alphanum" parsley-validation-minlength="1" parsley-equalto="#password">-->
 										</div>
 									</div>
 									<div class="form-group col-md-6">
 										<label for="passwordconfirm" class="col-sm-3 control-label">户口性质*</label>
 										<div class="col-sm-8">
-											<input type="text" class="form-control" id="hujixingzhi" parsley-trigger="change" parsley-required="true" parsley-minlength="6" parsley-type="alphanum" parsley-validation-minlength="1" parsley-equalto="#password">
+											<select class="form-control">
+												<option value=""></option>
+												<option value="">本市农业户口</option>
+												<option value="">本市城镇户口</option>
+												<option value="">非本市户口</option>
+											</select>
+											<!--<input type="text" class="form-control" id="hujixingzhi" parsley-trigger="change" parsley-required="true" parsley-minlength="6" parsley-type="alphanum" parsley-validation-minlength="1" parsley-equalto="#password">-->
+										</div>
+									</div>
+									<div class="form-group col-md-6">
+										<label class="col-sm-3 control-label">社保缴纳情况*</label>
+										<div class="col-sm-8">
+											<label class="radio-inline">
+											<input type="radio" name="sbstatus" id="inlineRadio1" value="1">已缴纳</input>
+											</label>
+											<label class="radio-inline">
+											  <input type="radio" name="sbstatus" id="inlineRadio2" value="0">未缴纳</input>
+											</label>
+											<label class="radio-inline">
+											  <input type="radio" name="sbstatus" id="inlineRadio3" value="2">已连续缴纳满1年</input>
+											</label>
 										</div>
 									</div>
 									<div class="form-group col-md-6">
@@ -170,12 +214,18 @@
 										</div>
 									</div>
 
-									<div class="form-group">
+									<div class="form-group col-md-6">
+										<label for="passwordconfirm" class="col-sm-3 control-label">户籍所在地*</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="hujidizhi" parsley-trigger="change" parsley-required="true" parsley-minlength="6" parsley-type="alphanum" parsley-validation-minlength="1" parsley-equalto="#password">
+										</div>
+									</div>
+									<!--<div class="form-group">
 										<label for="passwordconfirm" class="col-sm-2 control-label">户籍所在地*</label>
 										<div class="col-sm-9">
 											<input type="text" class="form-control" id="hujidizhi" parsley-trigger="change" parsley-required="true" parsley-minlength="6" parsley-type="alphanum" parsley-validation-minlength="1" parsley-equalto="#password">
 										</div>
-									</div>
+									</div>-->
 									<!--<div class="row">
 										<div class="form-group col-md-6">
 											<label for="passwordconfirm" class="col-sm-3 control-label">待定*</label>
@@ -185,6 +235,7 @@
 										</div>
 									</div>-->
 								</form>
+								
 							</div>
 
 							<div class="tab-pane" id="tab2">
@@ -201,6 +252,8 @@
 														<th class="sort-alpha">姓名</th>
 														<th class="sort-alpha">性别</th>
 														<th class="sort-amount">身份证号</th>
+														<th class="sort-alpha">婚姻状况</th>
+														<th class="sort-alpha">是否常住本市</th>
 														<th class="sort-numeric">与申请人关系</th>
 														<th class="no-sort">操作</th>
 													</tr>
@@ -211,6 +264,8 @@
 														<td>女</td>
 														<td>11111111111111111111</td>
 														<td class="text-center"> 夫妻</td>
+														<td>未婚</td>
+														<td>否</td>
 														<td class="actions text-center">
 															<a class="edit" href="#">Edit</a>
 															<a class="delete" href="#">Delete</a>
@@ -250,10 +305,10 @@
 				                          <div class="input-group">
 				                          <span class="input-group-btn">
 				                            <span class="btn btn-primary btn-file">
-				                              <i class="fa fa-upload"></i><input type="file" multiple="">
+				                              <i class="fa fa-upload"></i><input type="file" multiple="" ng-bind=#{{filename}}>
 				                            </span>
 				                          </span>
-				                          <input type="text" class="form-control" readonly="">
+				                          <input type="text" class="form-control" readonly="" ng-bind=#{{filename}}>
 				                        </div>
 				                        </div>
 				                    </div><div class="form-group">

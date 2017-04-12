@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 
 	<head>
 		<meta charset="UTF-8">
@@ -12,12 +12,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 
 			function hideURLbar() { window.scrollTo(0, 1); }
+			
 		</script>
 		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 		<link href="css/cnstyle.css" rel="stylesheet" type="text/css" />
 		<link href="css/jinduPanel.css" rel="stylesheet" type="text/css" />
-		
+		<style type="text/css">
+			td{font-size:12px;}
+			.titletd td{background-color:#EFEFEF;padding:2px;text-align:center;}
+			.datatd td{background-color:#FFFFFF;height:18px;padding-left:2px;}
+			.td1{width:80px;}
+			.td2{width:185px;}
+			.td3{width:80px;}
+			.td4{width:70px;}
+			.td5{width:60px;}
+			.td6{width:85px;}
+			.td7{width:62px;}
+		</style>
 
 		<!--script-->
 		<script src="js/jquery.min.js">
@@ -25,9 +37,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<script src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/move-top.js"></script>
 		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
-		<script type="text/javascript" src="js/jiduPanel.js"></script>
+		<script type="text/javascript" src="js/angular/angular.min.1.2.5.js" ></script>
+		<script type="text/javascript" src="js/angular/login.js"></script> 
+		<!--<script type="text/javascript" src="js/jiduPanel.js"></script>-->
+		<!--<script type="text/javascript" src="js/gundong.js"></script>-->
 		<!--<script type="text/javascript" src="js/easing.js"></script>-->
 		<script type="text/javascript">
+			
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event) {
 					event.preventDefault();
@@ -58,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					});
 
 				});
-				startscroll();
+				//startscroll();								
 				
 			});
 			function logincheck(){
@@ -107,7 +123,79 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<section class="color bgi">
 					<div class="container">
 						<div class="banneer-text" id="cljindu">
-							<div class="processtable">
+							<table border="0" width="100%" cellspacing="0" cellpadding="0">
+								<tr>
+								    <td width="100%">
+									<table width="550" border="0" cellpadding="0" cellspacing="1" bgcolor="#cccccc">
+										<tr class="titletd">
+											<td nowrap class="td1">姓名</td>
+											<td nowrap class="td2">身份证号</td>
+											<td nowrap class="td3">业务进度</td>											
+										</tr>
+									</table>
+									</td>
+								</tr>
+								<tr>
+								    <td width="100%">
+										<div id="A1">
+											<div id="A2">
+												<table width="550" border="0" cellpadding="0" cellspacing="1" bgcolor="#cccccc" style="margin-top:-1px;">
+													<tbody class="datatd">														
+														<tr>
+															<td nowrap class="td1">何婷</td>
+															<td nowrap class="td2">510**********0025</td>
+															<td nowrap class="td3"><span class="green">签约入住</span></td>
+														</tr>
+														<tr>
+															<td nowrap class="td1">张茹</td>
+															<td nowrap class="td2">610**********0427</td>
+															<td nowrap class="td3"><span class="green">签约入驻</span></td>
+														</tr>
+														<tr>
+															<td nowrap class="td1">王子磊</td>
+															<td nowrap class="td2">371**********6473</td>
+															<td nowrap class="td3"><span class="green">签约入驻</span></td>
+														</tr>
+														<tr>
+															<td nowrap class="td1">席石磊</td>
+															<td nowrap class="td2">321**********4512</td>
+															<td nowrap class="td3"><span class="green">签约入驻</span></td>
+														</tr>
+														<tr>
+															<td nowrap class="td1">王晔</td>
+															<td nowrap class="td2">140**********0030</td>
+															<td nowrap class="td3"><span class="green">签约入驻</span></td>
+														</tr>
+														<tr>
+															<td nowrap class="td1">周森林</td>
+															<td nowrap class="td2">310**********5094</td>
+															<td nowrap class="td3"><span class="green">轮候选房</span></td>
+														</tr>
+			
+														<tr>
+															<td nowrap class="td1">冀云肖</td>
+															<td nowrap class="td2">411**********3374</td>
+															<td nowrap class="td3"><span class="green">审核未通过</span></td>
+														</tr>
+														<tr>
+															<td nowrap class="td1">张建华</td>
+															<td nowrap class="td2">320**********1519</td>
+															<td nowrap class="td3"><span class="green">资质审核</span></td>
+														</tr>
+			
+														<tr>
+															<td nowrap class="td1">吴爽</td>
+															<td nowrap class="td2">420**********1664</td>
+															<td nowrap class="td3"><span class="green">轮候选房</span></td>
+														</tr>		
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+							<!--<div class="processtable">
 								<table border="0" cellspacing="0" cellpadding="0">
 									<tr>
 										<th style="width:85px;">姓名</th>
@@ -170,16 +258,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul id="con2">
    								 </ul>
 								</div>
-							</div>
+							</div>-->
 						</div>
-							<div class="banner-forms" id="clloginform">
+							<div class="banner-forms" ng-controller="loginCtrl" id="clloginform">
 								<form>
 									<!--
                                     	作者：only_one1021@163.com
                                     	时间：2017-03-10
                                     	描述：登录出错提示框
                                     -->
-									<div class="alert alert-danger alert-dismissable">
+									<div class="alert alert-danger alert-dismissable hidden">
 										<button class="close" data-dismiss="alert" aria-hidden="true">X</button>
 										tips
 									</div>
@@ -187,7 +275,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<label class="sr-only">登录名</label>
 										<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-										<input type="text" class="form-control" name="name" placeholder="用户名/手机号/身份证">
+										<input type="text" class="form-control" ng-model="user.name" name="name" placeholder="用户名/手机号/身份证">
 										</div>
 									</div>
 									<div class="form-group">
@@ -195,7 +283,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
 										
-										<input type="password" class="form-control" name="pwd" placeholder="密码">
+										<input type="password" class="form-control" ng-model="user.password" name="pwd" placeholder="密码">
 										</div>
 									</div>
 									<!--<input type="text" class="form-control" name="cfcode" placeholder="验证码" onfocus="this.value='';" onblur="if(this.value==''{this.value='';})">-->
@@ -220,7 +308,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>-->
 
 									<div class="form-group">
-										<select name="type" class="form-control" placeholder="用户类型">
+										<select name="type" ng-model="user.userType" class="form-control" placeholder="用户类型">
 											<option value="1">个人用户</option>
 											<option value="2">企业用户</option>
 											<option value="3">企业个人用户</option>
@@ -307,6 +395,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 			</div>
+			
 	</body>
+	<script type="application/javascript">
+		
+	</script>
 
 </html>

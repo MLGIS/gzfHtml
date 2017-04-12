@@ -281,6 +281,31 @@ body .navbar .navbar-header {
     display: block;
 }
 
+/*----在线选房-----*/
+.fyContianer{
+	margin-top:-10px;
+}
+.fy_filter{
+	background-color: #D5D5D5;
+	border-radius: 5px;	
+}
+.fy_filter .umlead{
+	float:left;
+	padding-left:15px;
+}
+.fyContianer .umrow{
+	line-height: 45px;
+	height: 45px;
+}
+.fy_filter ul{
+	display: inline-block;
+	list-style: none;
+}
+.fy_filter ul li{
+	float: left;
+	padding: 0 5px;
+}
+
 @media (max-width: 768px){
 
 body .navbar .navbar-header{

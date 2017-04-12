@@ -1,4 +1,4 @@
-<form id="defaultForm" method="post" class="form-horizontal" action="target.php">
+<form id="defaultForm" method="post" class="form-horizontal" action="#">
 	<div class="form-group">
 		<label class="col-lg-3 control-label">姓名</label>
 		<div class="col-lg-5">
@@ -20,17 +20,38 @@
 		</div>
 	</div>
 	<div class="form-group">
+		<label class="col-lg-3 control-label">企业邮箱</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="email" placeholder="企业邮箱" />
+		</div>
+	</div>
+	<div class="form-group">
             
         <label class="col-lg-3 control-label">法人类型</label>
         <div class="col-lg-5">
-            <select class="form-control" name="genre">
-                <option value="">企业法人</option>
-                <option value="">事业单位</option>
-                <option value="">行政单位</option>
-                <option value="">其他非企业法人</option>
-            </select>
+            <select class="form-control">
+				<option value="1"></option>
+				<option value="2">机关单位</option>
+				<option value="3">事业单位</option>
+				<option value="4">国有企业</option>
+				<option value="5">集体企业</option>
+				<option value="6">外资企业</option>
+				<option value="7">合资企业</option>
+				<option value="8">私营企业</option>
+				<option value="9">港澳台企业</option>
+				<option value="10">社会团体</option>
+				<option value="11">个体工商户</option>
+				<option value="12">非正规就业劳动组织</option>
+				<option value="0">其他</option>
+			</select>
         </div>
     </div>
+    <div class="form-group">
+		<label class="col-lg-3 control-label">企业法人</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="qiyefaren" placeholder="企业法人" />
+		</div>
+	</div>
     <div class="form-group">
 		<label class="col-lg-3 control-label">企业名称</label>
 		<div class="col-lg-5">
@@ -38,9 +59,9 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label class="col-lg-3 control-label">组织结构代码</label>
+		<label class="col-lg-3 control-label">三证合一</label>
 		<div class="col-lg-5">
-			<input type="text" class="form-control" name="email" placeholder="组织机构代码" />
+			<input type="text" class="form-control" name="email" placeholder="三证合一" />
 		</div>
 	</div>
 	<div class="form-group">
@@ -58,67 +79,29 @@
 	</div>
 
 	<div class="form-group">
-		<label class="col-lg-3 control-label">性别</label>
+		<label class="col-lg-3 control-label">是否预申请</label>
 		<div class="col-lg-5">
 			<div class="radio-inline">
 				<label>
-                    <input type="radio" name="gender" value="0" /> 男
+                    <input type="radio" name="gender" value="0" /> 是
                 </label>
 			</div>
 			<div class="radio-inline">
 				<label>
-                    <input type="radio" name="gender" value="1" /> 女
+                    <input type="radio" name="gender" value="1" /> 否
                 </label>
 			</div>
 		</div>
 	</div>
 
 	<div class="form-group">
-		<label class="col-lg-3 control-label">生日</label>
+		<label class="col-lg-3 control-label">注册时间</label>
 		<div class="col-lg-5">
-			<input type="text" class="form-control" name="birthday" placeholder="生日（YYYY/MM/DD）" /> (YYYY/MM/DD)
+			<input type="text" class="form-control" name="birthday" placeholder="日期（YYYY/MM/DD）" /> (YYYY/MM/DD)
 		</div>
 	</div>
 
-	<div class="form-group">
-		<label class="col-lg-3 control-label">选择语言</label>
-		<div class="col-lg-5">
-			<div class="checkbox-inline">
-				<label>
-                    <input type="checkbox" name="languages[]" value="english" /> English
-                </label>
-			</div>
-			<div class="checkbox-inline">
-				<label>
-					<input type="checkbox" name="languages[]" value="french" /> French
-				</label>
-			</div>
-
-		</div>
-	</div>
-
-	<div class="form-group">
-		<label class="col-lg-3 control-label">选择程序设计语言</label>
-		<div class="col-lg-5">
-			<div class="checkbox-inline">
-				<label>
-                    <input type="checkbox" name="programs[]" value="net" /> .Net
-				</label>
-			</div>
-			<div class="checkbox-inline">
-				<label>
-                   <input type="checkbox" name="programs[]" value="java" /> Java
-                </label>
-			</div>
-			<div class="checkbox-inline">
-				<label>
-                    <input type="checkbox" name="programs[]" value="c" /> C/C++
-                </label>
-			</div>
-
-		</div>
-	</div>
-
+	
 	<div class="form-group">
 		<label class="col-lg-3 control-label" id="captchaOperation"></label>
 		<div class="col-lg-2">
@@ -128,10 +111,9 @@
 
 	<div class="form-group">
 		<div class="col-lg-9 col-lg-offset-3">
-			<button type="submit" class="btn btn-primary" name="signup" value="Sign up">Sign up</button>
-			<button type="submit" class="btn btn-primary" name="signup2" value="Sign up 2">Sign up 2</button>
-			<button type="button" class="btn btn-info" id="validateBtn">Manual validate</button>
-			<button type="button" class="btn btn-info" id="resetBtn">Reset form</button>
+			<button type="submit" class="btn btn-primary hidden" name="signup" value="Sign up">Sign up</button>
+			<button type="button" class="btn btn-info" id="validateBtn">注册</button>
+			<button type="button" class="btn btn-info" id="resetBtn">重置</button>
 		</div>
 	</div>
 </form>

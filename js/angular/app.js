@@ -42,7 +42,7 @@ App.config(function($routeProvider, $locationProvider){
 	})
 	.when('/select',{
 		controller:'umSelect',
-		templateUrl:'container.html'
+		templateUrl:'fangyuan.html'
 	})
 	.otherwise({
 		redirectTo:'/'

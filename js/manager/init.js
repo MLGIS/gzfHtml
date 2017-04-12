@@ -87,7 +87,9 @@ function initWizard(){
         jqTds[1].innerHTML = '<input type="text" value="'+aData[1]+'">';
         jqTds[2].innerHTML = '<input type="text" value="'+aData[2]+'">';
         jqTds[3].innerHTML = '<input type="text" value="'+aData[3]+'">';
-        jqTds[4].innerHTML = '<a class="edit save" href="#">Save</a><a class="delete" href="#">Delete</a>';
+        jqTds[4].innerHTML = '<input type="text" value="'+aData[4]+'">';
+        jqTds[5].innerHTML = '<input type="text" value="'+aData[5]+'">';
+        jqTds[6].innerHTML = '<a class="edit save" href="#">Save</a><a class="delete" href="#">Delete</a>';
       };
 
       function saveRow (oTable02, nRow){
@@ -96,7 +98,9 @@ function initWizard(){
         oTable02.fnUpdate( jqInputs[1].value, nRow, 1, false );
         oTable02.fnUpdate( jqInputs[2].value, nRow, 2, false );
         oTable02.fnUpdate( jqInputs[3].value, nRow, 3, false );
-        oTable02.fnUpdate( '<a class="edit" href="#">Edit</a><a class="delete" href="#">Delete</a>', nRow, 4, false );
+        oTable02.fnUpdate( jqInputs[4].value, nRow, 4, false );
+        oTable02.fnUpdate( jqInputs[5].value, nRow, 5, false );
+        oTable02.fnUpdate( '<a class="edit" href="#">Edit</a><a class="delete" href="#">Delete</a>', nRow, 6, false );
         oTable02.fnDraw();
       };
 
@@ -146,7 +150,7 @@ function initTable(){
           return;
         }
         
-        var aiNew = oTable02.fnAddData([ '', '', '', '', '<a class="edit" href="">Edit</a>', '<a class="delete" href="">Delete</a>' ]);
+        var aiNew = oTable02.fnAddData([ '', '', '', '','','', '<a class="edit" href="">Edit</a>', '<a class="delete" href="">Delete</a>' ]);
         var nRow = oTable02.fnGetNodes(aiNew[0]);
         editRow(oTable02, nRow);
         nEditing = nRow;
@@ -194,4 +198,18 @@ function initTable(){
         label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
         input.trigger('fileselect', [numFiles, label]);
     });
+    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+        
+        var input = $(this).parents('.input-group').find(':text'),
+            log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+            console.log(log);
+        
+        if( input.length ) {
+          input.val(log);
+        } else {
+          if( log ) alert(log);
+        }
+        
+      });
 }
